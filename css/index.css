@@ -275,6 +275,10 @@ list-style-type: disc;
 padding-left: 50px;
 }
 
+.fb2-hidden{
+	display: none;
+}
+
 /* beginning of media queries from largest widths to smallest */
 
 @media (max-width: 1800px) {
@@ -321,11 +325,24 @@ padding-left: 50px;
 	}
 
 	.fb1 a{
-		font-size: 25px;
+		font-size: 20px;
 	}
 
-/* beginning of tablet view */
-@media (max-width: 800px) {
+/* beginning of table view */
 
+@media screen and (min-width: 501px) and (max-width: 800px) {
+  .fb2-hidden {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-evenly;
+		align-items: center;
+		align-content: center;
+		margin: 150px;
+		}  /* show it on small screens */
+}
 
+@media screen and (max-width: 800px) {
+    .fb2-2, .logo2, .second{
+        display:none;
+    }
 }
