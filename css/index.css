@@ -88,7 +88,7 @@ ul{
 
 /* first flexbox */
 
-.fb1, .fb1-s {
+.fb1{
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-between;
@@ -104,11 +104,15 @@ ul{
 	flex-grow: 1;
 }
 
+a.first{
+  display: none;
+}
+
 #logo {
 	color: black;
 	flex-grow: 2;
 	width: 125%;
-	flex-basis:  0 auto;
+	flex-basis: 0 auto;
 }
 
 /* header section */
@@ -271,26 +275,57 @@ list-style-type: disc;
 padding-left: 50px;
 }
 
+/* beginning of media queries from largest widths to smallest */
+
+@media (max-width: 1800px) {
+		.logo2{
+			height: 600px;
+			width: 600px;
+		}
+
+		.title{
+			font-size: 150px;
+		}
+
+		.fb1{
+			margin: 60px 180px;
+		}
+
+		.fb1 a{
+			font-size: 35px;
+		}
+
+		.fb3, .fb4, .fb5, .fb6{
+			margin: 50px 200px;
+		}
+}
+
+@media (max-width: 1500px) {
+	.logo2{
+		height: 400px;
+		width: 400px;
+	}
+
+	.title{
+		font-size: 100px;
+	}
+
+	.fb3, .fb4, .fb5, .fb6{
+		margin: 50px 150px;
+	}
+
+
+@media (max-width: 1350px) {
+	.fb1{
+		margin: 60px 120px;
+	}
+
+	.fb1 a{
+		font-size: 25px;
+	}
+
 /* beginning of tablet view */
+@media (max-width: 800px) {
 
-@media(max-width: 800px) {
-  nav.fb1{
-    margin: 40px;
-  }
 
-  .fb1 a{
-    /* width: 100%;
-    display: block;
-    margin: 0 auto; */
-    order: 2;
-  }
-
-  a.first{
-    order: 1;
-
-  }
-
-  .logo2{
-    display: none;
-  }
 }
